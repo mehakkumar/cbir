@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox prefHeight="252.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CbirController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false"  text="About" onAction="#aboutCbir"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox spacing="10.0">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Image Search" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="28.0" left="85.0" right="85.0" top="8.0" />
+         </VBox.margin>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="284.0">
+         <children>
+            <Button fx:id="scanSystemButton" layoutX="31.0" mnemonicParsing="false"   prefHeight="25.0" prefWidth="108.0" text="Scan System" onMouseEntered="#showTooltip" onAction="#scanSystem"/> 
+            <Button fx:id="fileSelectionButton" layoutX="151.0" mnemonicParsing="false" text="Histogram Search" onMouseEntered="#showTooltip" onAction="#searchImage" /> 
+            <Button fx:id="searchOnlineButton" layoutX="31.0" layoutY="40.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="108.0" text="Search Online" onMouseEntered="#showTooltip" onAction="#openBrowser"/>
+            <Label fx:id="infoLabel" alignment="CENTER" layoutX="-1.0" layoutY="96.0" prefWidth="284.0" text="Image Search" textAlignment="CENTER" />
+            
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
+
